@@ -2,6 +2,10 @@
 
 To review OpenGL rendering with C++ language in 2D and 3D spaces.
 
+## Outcomes
+
+![2D Graphics](/assets/2d.png?raw=true "2D Graphics")
+
 ## Environment Setup
 
 Environment setup in Ubuntu (Linux-based) is as follows:
