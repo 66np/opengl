@@ -19,3 +19,6 @@ NOTE: The libraries in #4 can be linked with the use of a Makefile.
 ## Lessons Learned
 
 - With the environment setup, ran into installer issues with GLFW with Windows. Linux Ubuntu was preconfigured with necessary command line tools and package managers (i.e. Debian's apt, gcc etc.). Also, Windows leads to system-specific configurations and learning whereas Linux is transferrable.
+- glutInitDisplayMode: GLUT\_SINGLE allows one to see code render onto screen whereas GLUT\_DOUBLE uses a complete buffer to mask the rendering of another buffer and allow for the buffer to swap to prevent flickering.
+- For GLUT\_SINGLE, glFlush forces OpenGL code to finish within finite time wherease glFinish waits until every pixel is rendered. glFlush is preferred for complex single buffer screen rendering, whereas glFinish is best to use before calling to screenshot.
+- For GLUT\_DOUBLE, glutSwapBuffers performs buffer swap for smooth animations
