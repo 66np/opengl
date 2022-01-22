@@ -5,6 +5,7 @@ To review OpenGL rendering with C++ language in 2D and 3D spaces.
 ## Outcomes
 
 ![2D Graphics](/assets/2d.png?raw=true "2D Graphics")
+![2D Frag Shader](/assets/2d-frag.png?raw=true "2D Frag Shader")
 
 ## Environment Setup
 
@@ -22,3 +23,4 @@ NOTE: The libraries in #4 can be linked with the use of a Makefile.
 - glutInitDisplayMode: GLUT\_SINGLE allows one to see code render onto screen whereas GLUT\_DOUBLE uses a complete buffer to mask the rendering of another buffer and allow for the buffer to swap to prevent flickering.
 - For GLUT\_SINGLE, glFlush forces OpenGL code to finish within finite time wherease glFinish waits until every pixel is rendered. glFlush is preferred for complex single buffer screen rendering, whereas glFinish is best to use before calling to screenshot.
 - For GLUT\_DOUBLE, glutSwapBuffers performs buffer swap for smooth animations
+- glBlendFunc quantifies pixel color as in how red, green, blue and alpha they are
