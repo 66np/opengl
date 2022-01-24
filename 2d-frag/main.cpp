@@ -18,6 +18,12 @@ void render(void)
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
     
+    
+    // Takes in x, y, z arguments
+    glTranslatef(-0.3, 0.5, 0.0);
+    glScalef(0.5, 0.5, 1.1);
+    glRotatef(90.0, 1.0, 1.0, 0.0);
+    
     glBegin(GL_TRIANGLES);
     	glColor3f(1, 0, 0);
     	glVertex2f(-0.7, -0.7);
