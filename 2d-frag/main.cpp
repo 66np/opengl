@@ -22,7 +22,7 @@ void render(void)
     // Takes in x, y, z arguments
     glTranslatef(-0.3, 0.5, 0.0);
     glScalef(0.5, 0.5, 1.1);
-    glRotatef(90.0, 1.0, 1.0, 0.0);
+    glRotatef(45.0, 1.0, 1.0, 0.0);
     
     glBegin(GL_TRIANGLES);
     	glColor3f(1, 0, 0);
