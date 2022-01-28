@@ -8,7 +8,7 @@
 void render(void)
 {
 
-    glClear(GL_COLOR_BUFFER_BIT);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     
     glDepthFunc(GL_ALWAYS);
     glEnable(GL_DEPTH_TEST);
@@ -37,6 +37,22 @@ void render(void)
 
 }
 
+void reshape(int w, int h)
+{
+    if(h == 0)
+    	h = 1;
+    
+    float ratio = 1.0*w/h;
+    glViewport(0, 0, w, h);
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+    gluPerspective(45.0f, ratio, 1000.0f, 1000.0f);
+    glMatrixMode(GL_MODELVIEW);
+    glLoadIdentity();
+    render();
+    
+}
+
 int main(int argc, char** argv)
 {
     glutInit(&argc, argv);
@@ -45,6 +61,8 @@ int main(int argc, char** argv)
     glutInitWindowPosition(100, 100);
     glutCreateWindow("2d frag shader");
     glutDisplayFunc(render);
+    glutReshapeFunc(reshape);
+    
     glutMainLoop();
     return 0;
 }
