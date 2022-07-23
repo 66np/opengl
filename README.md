@@ -7,6 +7,7 @@ To review OpenGL rendering with C++ language in 2D and 3D spaces.
 ![2D Graphics](/assets/2d.png?raw=true "2D Graphics")
 ![2D Frag Shader](/assets/2d-frag.png?raw=true "2D Frag Shader")
 ![Added glTranslatef, glScalef and glRotatef attributes](/assets/2d-frag-transform.png?raw=true "2D Frag Shader Transformed")
+![3D Graphics | Triangular Prism](/assets/3d.png?raw=true "3D Graphics")
 
 ## Environment Setup
 
